@@ -54,8 +54,8 @@ function posicaoRandomica() {
     }
   }
 
-  var posicaoX = Math.floor(Math.random() * largura) - 90
-  var posicaoY = Math.floor(Math.random() * altura) - 90
+  var posicaoX = Math.floor(Math.random() * largura) - 110
+  var posicaoY = Math.floor(Math.random() * altura) - 110
 
   posicaoX = posicaoX < 0 ? 0 : posicaoX
   posicaoY = posicaoY < 0 ? 0 : posicaoY
