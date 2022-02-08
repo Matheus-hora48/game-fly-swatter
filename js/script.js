@@ -15,7 +15,6 @@ if (nivel === 'normal') {
   //1000
   criaMosquitoTempo = 1000
 } else if (nivel === 'chucknorris') {
-
   criaMosquitoTempo = 750
 }
 
@@ -104,3 +103,5 @@ function ladoAleatorio() {
       return 'ladoB'
   }
 }
+
+// criar o sangue
