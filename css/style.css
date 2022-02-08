@@ -1,3 +1,12 @@
+html,
+body {
+  font-family: sans-serif;
+}
+
+html {
+  cursor: url(../img/mata_mosca.png) 30 30, auto;
+}
+
 body {
   background: url(../img/bg.jpg);
   background-repeat: no-repeat;
@@ -53,3 +62,35 @@ body {
   font-size: 22px;
   font-weight: 600;
 }
+
+main {
+  text-align: center;
+  font-size: 2em;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.botao {
+  display: inline-block;
+  margin: 1.5em;
+  border: 0;
+  padding: 1em 1em;
+  text-decoration: none;
+  color: #fff;
+  background: #f60;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5em;
+  box-shadow: 3px 3px 0 3px #930;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.botao:active {
+  box-shadow: 0 0 0 0 #930, inset 4px 4px 4px #930;
+  transform: translate(6px, 6px);
+}
+  

@@ -1,13 +1,29 @@
 var altura = 0
 var largura = 0
 var vidas = 1
-var tempo = 10
+var tempo = 60
+
+var criaMosquitoTempo = 1500
+
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if (nivel === 'normal') {
+  //1500
+  criaMosquitoTempo = 1500
+} else if (nivel === 'dificil') {
+  //1000
+  criaMosquitoTempo = 1000
+} else if (nivel === 'chucknorris') {
+
+  criaMosquitoTempo = 750
+}
 
 function tamanhoTela() {
   altura = window.innerHeight
   largura = window.innerWidth
 
-  console.log(altura, largura)
+  console.log(largura, altura)
 }
 
 tamanhoTela()
@@ -25,9 +41,11 @@ var cronometro = setInterval(function () {
 }, 1000)
 
 function posicaoRandomica() {
+  //remover o mosquito anterior (caso exista)
   if (document.getElementById('mosquito')) {
     document.getElementById('mosquito').remove()
 
+    //console.log('elemento selecionado foi: v' + vidas)
     if (vidas > 3) {
       window.location.href = 'fim_de_jogo.html'
     } else {
@@ -45,6 +63,7 @@ function posicaoRandomica() {
 
   console.log(posicaoX, posicaoY)
 
+  //criar o elemento html
   var mosquito = document.createElement('img')
   mosquito.src = './img/mosca.png'
   mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
@@ -65,8 +84,10 @@ function tamanhoAleatorio() {
   switch (classe) {
     case 0:
       return 'mosquito1'
+
     case 1:
       return 'mosquito2'
+
     case 2:
       return 'mosquito3'
   }
@@ -78,6 +99,7 @@ function ladoAleatorio() {
   switch (classe) {
     case 0:
       return 'ladoA'
+
     case 1:
       return 'ladoB'
   }
