@@ -93,4 +93,21 @@ button {
   box-shadow: 0 0 0 0 #930, inset 4px 4px 4px #930;
   transform: translate(6px, 6px);
 }
-  
+
+option {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+option:hover {
+  background: #f60;
+}
+.form-control {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+select {
+  background: #f60;
+}
