@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title></title>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/script.js"></script>
+    <script>
+      var teste = new Audio()
+      teste.src = './audio/sound-smach2.mp3'
+    </script>
   </head>
-  <body onresize="tamanhoTela()">
+  <body onresize="ajustaTamanhoPalcoJogo()" onclick="teste.play()">
     <div class="painel">
       <div class="vidas">
-        <img id="v1" src="./img/coracao_cheio.png" alt="" />
-        <img id="v2" src="./img/coracao_cheio.png" alt="" />
-        <img id="v3" src="./img/coracao_cheio.png" alt="" />
+        <img id="v1" src="./img/coracao_cheio.png" />
+        <img id="v2" src="./img/coracao_cheio.png" />
+        <img id="v3" src="./img/coracao_cheio.png" />
       </div>
 
       <div class="cronometro">
@@ -26,10 +28,11 @@
 
       var criaMosca = setInterval(function () {
         posicaoRandomica()
-      }, 2000)
+      }, criaMosquitoTempo)
     </script>
     <audio preload="auto" autoplay volume="0.1">
       <source src="./audio/music-level.mp3" />
+      <source src="./audio/music-imposi.mp3" id="sound-impo" />
     </audio>
   </body>
 </html>
