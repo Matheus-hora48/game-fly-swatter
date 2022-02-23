@@ -14,7 +14,7 @@ if (nivel === 'normal') {
 } else if (nivel === 'dificil') {
   //1000
   criaMosquitoTempo = 1000
-} else if (nivel === 'chucknorris') {
+} else if (nivel === 'impossivel') {
   criaMosquitoTempo = 750
 }
 
